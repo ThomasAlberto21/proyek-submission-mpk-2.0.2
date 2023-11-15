@@ -29,8 +29,14 @@ package com.dicoding.exam.latihanopsional3
  *  Modul terkait: Kotlin Fundamental & Collections
  */
 
-fun manipulateString(str: String, int: Int): String {
-    return ""
+fun manipulateString(input: String, factor: Int): String {
+    val number = input.filter { it.isDigit() }
+    val string = input.filter { !it.isDigit() }
+    return if (number.isNotEmpty()) {
+        string + (number.toInt() * factor)
+    } else {
+        string + factor
+    }
 }
 
 fun main() {
