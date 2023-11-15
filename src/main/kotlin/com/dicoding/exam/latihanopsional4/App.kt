@@ -29,8 +29,12 @@ package com.dicoding.exam.latihanopsional4
  *
  */
 
-fun getMiddleCharacters(string: String): String {
-    return ""
+fun getMiddleCharacters(text: String): String {
+    return if (text.length % 2 == 0) {
+        text.substring(text.length / 2 - 1, text.length / 2 + 1)
+    } else {
+        text.substring(text.length / 2, text.length / 2 + 1)
+    }
 }
 
 fun main() {
